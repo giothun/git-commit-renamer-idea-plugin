@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.example.gitrenamecommit</id>
+    <name>Git Rename Commit</name>
+    <vendor email="giothun1@gmail.com" url="https://example.com">Georgii Gromov</vendor>
+
+    <description><![CDATA[
+        Adds a "Rename Current Commit" action to the Git menu and toolbar.
+        This plugin allows you to quickly rename the latest commit (HEAD).
+    ]]></description>
+
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Git Commit Rename"
+                           displayType="BALLOON"
+                           isLogByDefault="true"/>
+    </extensions>
+
+    <actions>
+        <action id="com.example.gitrenamecommit.RenameCurrentCommitAction"
+                class="com.example.gitrenamecommit.RenameCurrentCommitAction"
+                text="Rename Current Commit"
+                description="Renames the current commit message"
+                icon="AllIcons.Actions.Edit">
+            <add-to-group group-id="Git.Log.ContextMenu" anchor="last"/>
+            <add-to-group group-id="Git.MainMenu" anchor="last"/>
+
+        </action>
+    </actions>
+</idea-plugin>
