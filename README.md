@@ -1,4 +1,4 @@
-# Git Commit Renamer
+# Git Commit Renamer IDEA Plugin
 
 An IntelliJ IDEA plugin that allows you to rename (amend) the most recent Git commit message easily.
 
